@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collect digits from user input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Draw the digit: <strong id="digit-prompt">?</strong></h1>
+    <!-- <p>Please draw the digit: <strong id="digit-prompt">?</strong></p> -->
+
+    <canvas id="drawing-canvas" width="280" height="280"></canvas>
+
+    <div class="controls">
+        <button id="clear-button">Clear</button>
+        <button id="send-button">Send Digit</button>
+    </div>
+
+    <p id="feedback-message"></p>
+    <button id="next-digit-button" style="display:none;">Draw Another</button>
+
+    <script src="{{ url_for('static', filename='js/collect.js') }}"></script>
+</body>
+</html>
+
