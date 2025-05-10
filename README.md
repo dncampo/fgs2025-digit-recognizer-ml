@@ -2,7 +2,6 @@
 
 An interactive handwritten digit recognition demo showcasing machine learning integration with FIWARE Smart Data Models and Context Broker.
 
-![FIWARE Banner](https://www.fiware.org/wp-content/uploads/2021/12/Screenshot-2021-12-23-at-14.02.21.jpg)
 
 ## Overview
 
@@ -122,3 +121,39 @@ This project is licensed under [AGPL-3.0](LICENSE)
 - [Orion-LD Context Broker](https://github.com/FIWARE/context.Orion-LD)
 - [FIWARE Smart Data Models](https://github.com/smart-data-models/)
 - [NGSI-LD Tutorials](https://fiware-tutorials.readthedocs.io/en/latest/)
+
+## Deployment Options
+
+### Running with Flask Development Server
+
+// ... existing code ...
+
+### Deploying with Apache2
+
+To deploy this application on a production server with Apache2:
+
+1. Install the required packages:
+   ```
+   sudo apt-get update
+   sudo apt-get install apache2 libapache2-mod-wsgi-py3 python3-pip python3-venv
+   ```
+
+2. Copy the project files to your server (e.g., in `/var/www/fgs2025-digit-recognizer-ml`)
+
+3. Use the provided deployment script:
+   ```
+   cd /path/to/fgs2025-digit-recognizer-ml
+   sudo bash src/deploy.sh
+   ```
+
+4. Or manually configure Apache:
+   - Create a virtual environment and install requirements
+   - Copy `src/digit-recognizer.conf` to `/etc/apache2/sites-available/`
+   - Enable the site: `sudo a2ensite digit-recognizer`
+   - Restart Apache: `sudo systemctl restart apache2`
+
+5. Update the ServerName in the Apache configuration file to match your domain or server IP.
+
+The application should now be accessible at http://your-server-ip or your configured domain.
+
+> **Note**: Make sure the Context Broker is also properly configured and accessible from the server.
