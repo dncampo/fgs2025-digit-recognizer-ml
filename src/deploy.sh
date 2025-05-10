@@ -60,5 +60,4 @@ echo "=== Restarting Apache ==="
 systemctl restart apache2
 
 echo "=== Deployment complete ==="
-echo "Your application should be accessible at http://your-server-ip or http://digit-recognizer.example.com"
-echo "Don't forget to update the ServerName in the Apache configuration if needed" 
+echo "The application should be accessible at http://server-ip or http://david-fgs2025.fiware.org/"
