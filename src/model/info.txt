@@ -1,0 +1,2 @@
+Model taken from: https://huggingface.co/lizardwine/DigitClassifier/tree/main
+More info: https://huggingface.co/lizardwine/DigitClassifier/blob/main/README.md
